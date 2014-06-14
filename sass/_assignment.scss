@@ -1,0 +1,290 @@
+// base style file
+// style for the advanced search elements are in _advsearchsection file
+// style for the tags elements are in _middlesection file
+// style for the table results are in _resulstsection file
+
+//
+// vars
+//
+$desktopBreakPointMin: 1023px;
+$tabletBreakPoint: 768px;
+$mobileBreakPointMax: 767px;
+$mobileBreakPointMin: 320px;
+
+$checkboxsBreakPoint: 510px;
+
+$borderGrey: #c5c5c5;
+$borderBlue: #1697c5;
+
+$borderRadiusRegular: 3px;
+$borderRadiusSmall: 2px;
+
+//
+// general style
+// common elements
+//
+
+body{
+	font: 12px Helvetica, Arial, sans-serif;
+	color:#111111;
+}
+
+a{
+	color:#111111;
+}
+
+input[type="submit"]{
+	cursor:pointer;
+}
+
+.clearfix:before, .clearfix:after {
+	display: table;
+	content: "";
+	line-height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.main{
+	padding: 30px 20px;
+}
+
+.users-overview{
+
+	//General tags 
+
+	a{
+		text-decoration:none;
+	}
+
+	h3{
+		font-weight: bold;
+		margin-bottom: 7px;
+	}
+
+	h4{
+		font-weight: bold;
+		padding-left: 3px;
+	}
+
+	.main{
+
+		margin:40px auto;
+		max-width:940px;
+	}
+
+	// Buttons 
+	.lightGreyStyle{
+		border:1px solid $borderGrey;
+		
+  		@include background-image(linear-gradient(#FFFFFF, #f3f3f3));
+		@include border-radius($borderRadiusSmall);
+	}
+
+	.btGreen{
+		margin:0;
+		display: inline-block;
+		padding:0px 10px;
+		height: 28px;
+		line-height: 28px;
+		color: #FFFFFF;
+		font-weight: bold;
+		text-shadow: 0px -1px 0px #79a81e;
+		border:1px solid #78a81e;
+		@include background-image(linear-gradient(#9fcc41, #95c62d));
+		@include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.17));
+		@include border-radius($borderRadiusRegular);
+
+	}
+	
+	.btBlue{
+		height: 30px;
+		padding:0 10px;
+		margin-left: 0px;
+		color: #FFFFFF;
+		font-weight: bold;
+		text-shadow: 0px -1px 0px #1597c5;
+		border:1px solid $borderBlue;
+		cursor: pointer;
+		@include background-image(linear-gradient(#28bdf5, #12b6f4));
+		@include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.17));
+		@include border-radius($borderRadiusRegular);
+	}
+
+	.btRemoveRow{
+		display: none;
+		width: 28px;
+		height: 28px;
+		text-align: center;
+		float: left;
+		border: 1px solid #cb5841;
+		@include background-image(linear-gradient(#e07561, #dd6751));
+		@include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.17));
+
+		span{
+			width:10px;
+			height:10px;
+			margin: 8px 0;
+			display: inline-block;
+			background-image: url('../img/sprite-advSearch.png');
+			background-position: -82px -76px;
+			background-repeat: no-repeat;
+		}
+	}
+
+	//Links
+	.cancelOpt{
+		color: #d9604c;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+
+	.linkBlue{
+		display: inline-block;
+		color: #1dadf5;
+		margin-right: 12px;
+		height: auto;
+
+		&:hover{
+			background: none !important;
+			text-decoration: underline;
+			color: #1dadf5;
+		}
+	}
+
+	//dropdown
+	.dropdownContainer{
+		position: relative;
+		height:30px;
+		width: 198px;
+		margin-right: 7px;
+		float: left;
+		@include box-shadow(0px 1px 2px 0px rgba(0, 0, 0, 0.17));
+
+
+		.arrow{
+			position: absolute;
+			top:12px;
+			right: 8px;
+			width: 8px;
+			height: 4px;
+			display: block;
+			background-image: url('../img/sprite-advSearch.png');
+			background-position: -20px -52px;
+			background-repeat: no-repeat;
+		}
+
+		&.open{
+			.dropdown{
+				z-index: 10;
+				overflow: auto;
+				height: auto;
+				background: #FFFFFF; 
+			}
+			.arrow{
+				z-index: 11;
+				background-position: -49px -52px;
+			}
+
+			a:hover{
+				background: #2baef2;
+			}
+		}
+
+		&.inactive .dropdown{
+			@include opacity(0.5);
+
+			&:hover{
+				
+				overflow: hidden;
+
+			 	a{
+			 		background: none;
+			 		cursor: default;
+				}
+			}
+		}
+	}
+
+	//general dropdown style
+	.dropdown{
+		height: 28px;
+		width: 198px;
+		overflow: hidden;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+
+		li{
+			height: 28px;
+		}
+
+		a{
+			display: block;
+			padding-left: 10px;
+			line-height: 28px;
+
+			&.placeholder:hover{
+				background: none;
+			}
+		}
+	}
+
+	.paginationContainer{
+		float: right;
+
+		.pagination{
+			float:left;
+			margin-right: 14px;
+
+		}
+
+		span{
+			line-height: 28px;
+		
+			&.separator{
+				height:7px;
+				width: 1px;
+				line-height:7px;
+				background:#717171;
+				display:inline-block;
+				margin: 0 6px 0 5px;
+			}
+
+			&.lighter{
+				background: #adadad;
+			}
+
+			&:last-of-type{
+				margin-right: 3px;
+			}
+		}
+
+		.currentPag{
+			height: 28px;
+			width: 28px;
+			display: inline-block;
+			text-align: center;
+		}
+
+		.dropdown, .dropdownContainer{
+			width: 88px;
+			margin-right: 2px;
+		}
+
+		.arrows{
+			font-size: 16px;
+			padding: 0 3px 0 1px;
+		}
+
+		.disable{
+			color: #dddddd;
+		}
+
+		.linkBlue{
+			margin: 0;
+		}
+	}
+}

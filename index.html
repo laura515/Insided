@@ -1,0 +1,356 @@
+<!DOCTYPE>
+<html>  
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+        <title>Insided Assignment</title>
+        
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="css/base.css">
+
+        <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+        <script src='js/assignment.js'></script> 
+    </head>
+ 
+    <body class="users-overview">
+		<section class="main">
+
+			<section class="search-container">
+
+                <form id="searchform">
+                    <!-- dropdowns -->
+                    <fieldset>
+                        <h3>Advanced search</h3>
+                        <div class="dropdownsSection clearfix">
+                        </div>    
+                        <a class="btGreen addRow" href="#">Add row</a>
+
+                    </fieldset>
+
+                    <!-- checkboxs -->
+                    <fieldset class="checkbox-columns">
+                        <h3>Columns</h3>
+                       <ul>
+                            <li><input type="checkbox" name="Usertitle" value="Usertitle">Usertitle</li>
+                            <li><input type="checkbox" name="Comments" value="Comments" checked>Comments</li>
+                            <li><input type="checkbox" name="DeletedComments" value="DeletedComments">Deleted comments</li>
+                            <li><input type="checkbox" name="DeletedTopics" value="DeletedTopics">Deleted topics</li>
+                            <li><input type="checkbox" name="QuestionSolved" value="QuestionSolved">Question solved</li>
+                        </ul>
+                        <ul>
+                            <li><input type="checkbox" name="Topics" value="Topics" checked>Topics</li>
+                            <li><input type="checkbox" name="UserGroup" value="Usergroup" checked>Usergroup</li>
+                            <li><input type="checkbox" name="SecundairyUserGroup" value="SecundairyUserGroup">Secundairy usergroup</li>
+                            <li><input type="checkbox" name="RegistrationDate" value="RegistrationDate" checked>Registration date</li>
+                            <li><input type="checkbox" name="LastLogin" value="LastLogin" checked>Last login</li>
+                        </ul>
+                        <ul>
+                            <li><input type="checkbox" name="Login" value="Login">Login</li>
+                            <li><input type="checkbox" name="LastCommment" value="LastCommment" checked>Last comment</li>
+                            <li><input type="checkbox" name="Email" value="Email">Email</li>
+                            <li><input type="checkbox" name="SSOID" value="SSOID">SSO-ID</li>
+                            <li><input type="checkbox" name="IpAddress" value="IpAddress">Ip-Address</li>
+                        </ul>
+                        <ul>
+                            <li><input type="checkbox" name="Gender" value="Gender">Gender</li>
+                            <li><input type="checkbox" name="DateofBirth" value="DateofBirth">Date of birth</li>
+                            <li><input type="checkbox" name="Location" value="Location">Location</li>
+                            <li><input type="checkbox" name="Insterests" value="Insterests">Insterests</li>
+                        </ul>
+                        <ul>
+                            <li><input type="checkbox" name="Profession" value="Profession">Profession</li>
+                            <li><input type="checkbox" name="Signature" value="Signature">Signature</li>
+                            <li><input type="checkbox" name="Notes" value="Notes">Notes</li>
+                            <li><input type="checkbox" name="Badges" value="Badges">Badges</li>
+                        </ul>
+                        <ul>   
+                            <li><input type="checkbox" name="ReputationRecived" value="ReputationRecived">Reputation received</li>
+                            <li><input type="checkbox" name="ReputationGiven" value="ReputationGiven">Reputation given</li>
+                            <li><input type="checkbox" name="Followers" value="Followers">Followers</li>
+                            <li><input type="checkbox" name="Following" value="Following">Following</li>
+                        </ul>
+                    </fieldset>
+
+                    <!-- form buttons -->
+                    <fieldset>
+                        <input class="btBlue" type="submit" value="Update">
+                        <a class="cancelOpt" href="#">Cancel</a>
+                    </fieldset>
+
+                </form>
+			</section>
+
+            <section class="middleSelection">
+                <div class="tagsContainer">
+                </div>
+                <a class="cancelOpt" href="#">Clear selection</a>
+                <div class="paginationContainer">
+                    <div class="pagination">
+                        <a class="disable">First</a>
+                        <span class="separator lighter"></span> 
+                        <a class="prev arrows disable">&laquo;</a> 
+                        <span class="separator"></span> Page <span class="currentPag lightGreyStyle">1</span> of 10 
+                        <span class="separator"></span> 
+                        <a class="next arrows linkBlue">&raquo;</a> 
+                        <span class="separator lighter"></span> 
+                        <a class="linkBlue">Last</a>
+                    </div>
+                
+                    <div class="dropdownContainer">
+                        <ul class="dropdown lightGreyStyle">
+                            <li><a class="placeholder">10 Rows</a></li>
+                        </ul>
+                        <span class="arrow"></span>
+                    </div>
+                </div>
+            </section>
+
+			<section class="resultSection">
+				<ul class="tableList">
+                    <li class="resultHeader clearfix"> 
+                        <div class="username">
+                            <input type="checkbox" name="username" value="username">
+                            User name
+                        </div>
+                        <div class="comments">
+                            Comments
+                        </div>
+                        <div class="topics">
+                            Topics
+                        </div>
+                        <div class="usergroups">
+                            Usergroup
+                        </div>
+                        <div class="registration">
+                            Registration date
+                        </div>
+                        <div class="lastlogin">
+                            Last login
+                        </div>
+                        <div class="lastcomment">
+                            Last comment
+                        </div>
+                    </li>
+                    <li class="clearfix"> 
+                        <div class="username">
+                            <input type="checkbox" name="AmberH" value="AmberH">
+                            <img src="img/avatars/avatar-1.jpg" alt="AmberH" height="23" width="25">
+                            <a href="https://www.google.com/">Amber H.</a>
+                            <a class="windowLink" href="https://www.google.com/" ></a> 
+                        </div>
+                        <div class="comments">
+                            64
+                        </div>
+                        <div class="topics">
+                            9
+                        </div>
+                        <div class="usergroups">
+                            <span class="align-right">Registrered user</span>
+                        </div>
+                        <div class="registration">
+                            <time datetime="2012-03-19">19-mar-12 12:00</time>
+                        </div>
+                        <div class="lastlogin">
+                            <time datetime="2012-08-16">16-aug-12 12:11</time>
+                        </div>
+                        <div class="lastcomment">
+                            <time datetime="2012-08-16">16-aug-12 16:10</time>
+                        </div>
+                    </li>
+                    <li class="clearfix"> 
+                        <div class="username">
+                            <input type="checkbox" name="BartPineapple" value="BartPineapple">
+                            <img src="img/avatars/avatar-2.jpg" alt="Bart Pineapple" height="23" width="25">
+                            <a href="https://www.google.com/">Bart Pineapple</a>
+                            <a class="windowLink" href="https://www.google.com/" ></a> 
+                        </div>
+                        <div class="comments">
+                            37
+                        </div>
+                        <div class="topics">
+                            -
+                        </div>
+                        <div class="usergroups">
+                            <span class="align-right">Registrered user</span>
+                        </div>
+                        <div class="registration">
+                            <time datetime="2011-03-20">20-mar-11 12:00</time>
+                        </div>
+                        <div class="lastlogin">
+                            <time datetime="2012-05-15">15-may-12 17:34</time>
+                        </div>
+                        <div class="lastcomment">
+                            <time datetime="2012-05-14">14-may-12 20:01</time>
+                        </div>
+                    </li>
+                    <li class="clearfix"> 
+                        <div class="username">
+                            <input type="checkbox" name="CaitlynAppleseed" value="CaitlynAppleseed">
+                            <img src="img/avatars/avatar-3.jpg" alt="Caitlyn Appleseed" height="23" width="25">
+                            <a href="https://www.google.com/">Caitlyn Appleseed</a>
+                            <a class="windowLink" href="https://www.google.com/" ></a> 
+                        </div>
+                        <div class="comments">
+                            189
+                        </div>
+                        <div class="topics">
+                            13
+                        </div>
+                        <div class="usergroups">
+                            <span class="align-right">Registrered user</span>
+                        </div>
+                        <div class="registration">
+                            <time datetime="2012-08-13">13-aug-12 22:09</time>
+                        </div>
+                        <div class="lastlogin">
+                            <time datetime="2012-08-13">13-aug-12 22:10</time>
+                        </div>
+                        <div class="lastcomment">
+                            <time datetime="2012-08-13">13-aug-12 23:50</time>
+                        </div>
+                    </li>
+                    <li class="clearfix"> 
+                        <div class="username">
+                            <input type="checkbox" name="CarmenCandy" value="CarmenCandy">
+                            <img src="img/avatars/avatar-4.jpg" alt="Carmen Candy" height="23" width="25">
+                            <a href="https://www.google.com/">Carmen Candy</a>
+                            <a class="windowLink" href="https://www.google.com/" ></a> 
+                        </div>
+                        <div class="comments">
+                            411
+                        </div>
+                        <div class="topics">
+                            22
+                        </div>
+                        <div class="usergroups">
+                            <span class="align-right">Moderator</span>
+                        </div>
+                        <div class="registration">
+                            <time datetime="2011-01-01">01-jan-11 11:21</time>
+                        </div>
+                        <div class="lastlogin">
+                            <time datetime="2012-08-15">15-aug-12 22:10</time>
+                        </div>
+                        <div class="lastcomment">
+                            <time datetime="2012-08-15">15-aug-12 18:13</time>
+                        </div>
+                    </li>
+                    <li class="clearfix"> 
+                        <div class="username">
+                            <input type="checkbox" name="DolfDreamer" value="DolfDreamer">
+                            <img src="img/avatars/avatar-5.jpg" alt="Dolf Dreamer" height="23" width="25">
+                            <a href="https://www.google.com/">Dolf Dreamer</a>
+                            <a class="windowLink" href="https://www.google.com/" ></a> 
+                        </div>
+                        <div class="comments">
+                            282
+                        </div>
+                        <div class="topics">
+                            -
+                        </div>
+                        <div class="usergroups">
+                            <span class="align-right">Super-user</span>
+                        </div>
+                        <div class="registration">
+                            <time datetime="2011-01-18">18-jan-11 12:08</time>
+                        </div>
+                        <div class="lastlogin">
+                            <time datetime="2012-08-16">16-aug-12 13:12</time>
+                        </div>
+                        <div class="lastcomment">
+                            <time datetime="2012-08-16">16-aug-12 14:22</time>
+                        </div>
+                    </li>
+                    <li class="clearfix"> 
+                        <div class="username">
+                            <input type="checkbox" name="DolfDreamer" value="DolfDreamer">
+                            <img src="img/avatars/avatar-5.jpg" alt="Dolf Dreamer" height="23" width="25">
+                            <a href="https://www.google.com/">Dolf Dreamer</a>
+                            <a class="windowLink" href="https://www.google.com/" ></a> 
+                        </div>
+                        <div class="comments">
+                            282
+                        </div>
+                        <div class="topics">
+                            -
+                        </div>
+                        <div class="usergroups">
+                            <span class="align-right">Super-user</span>
+                        </div>
+                        <div class="registration">
+                            <time datetime="2011-01-18">18-jan-11 12:08</time>
+                        </div>
+                        <div class="lastlogin">
+                            <time datetime="2012-08-16">16-aug-12 13:12</time>
+                        </div>
+                        <div class="lastcomment">
+                            <time datetime="2012-08-16">16-aug-12 14:22</time>
+                        </div>
+                    </li>
+                </ul> 
+                <!-- end tablelist-->
+
+                <div class="footerResults">
+                    <form id="resultfilter" class="dropdownsFooter clearfix">
+                        
+                        <div class="dropdownContainer">
+                            <ul class="dropdown lightGreyStyle">
+                                <li><a class="placeholder">Change usergroup</a></li>
+                                <li><a>Registered user</a></li>
+                                <li><a>Super user</a></li>
+                                <li><a>Moderator</a></li>
+                            </ul>
+                            <span class="arrow"></span>
+                        </div>
+
+                        <div class="dropdownContainer">
+                            <ul class="dropdown lightGreyStyle">
+                                <li><a class="placeholder">Add secundairy us..</a></li>
+                            </ul>
+                            <span class="arrow"></span>
+                        </div>
+
+                        <div class="dropdownContainer">
+                            <ul class="dropdown lightGreyStyle">
+                                <li><a class="placeholder">Permissions</a></li>
+                            </ul>
+                            <span class="arrow"></span>
+                        </div>
+
+                        <input class="lightGreyStyle" type="submit" value="Apply">
+                    </form>
+                    <div class="exportContainer">
+                        <span class="loading"><img src="img/loader.gif" width="13" height="13">72%</span>
+                        <a class="lightGreyStyle exportExcel">Export to Excel</a>
+                    </div>
+                </div>
+                <!-- end footer results-->
+
+                <div class="paginationContainer">
+                    <div class="pagination">
+                        <a class="disable">First</a>
+                        <span class="separator lighter"></span> 
+                        <a class="prev arrows disable">&laquo;</a> 
+                        <span class="separator"></span> Page <span class="currentPag lightGreyStyle">1</span> of 10 
+                        <span class="separator"></span> 
+                        <a class="next arrows linkBlue">&raquo;</a> 
+                        <span class="separator lighter"></span> 
+                        <a class="linkBlue">Last</a>
+                    </div>
+                
+                    <div class="dropdownContainer">
+                        <ul class="dropdown lightGreyStyle">
+                            <li><a class="placeholder">10 Rows</a></li>
+                        </ul>
+                        <span class="arrow"></span>
+                    </div>
+                </div>
+                <!-- end paginationContainer-->
+
+			</section>
+
+		</section>
+    </body>
+</html>

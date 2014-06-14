@@ -1,0 +1,294 @@
+//
+// Result Section elements
+//
+
+.users-overview{
+
+	.resultSection{
+		.paginationContainer{
+			margin-top: 10px;
+		}
+	}
+
+	.tableList{
+		border: 1px solid $borderGrey;
+
+		li{
+			
+			border-bottom: 1px solid $borderGrey;
+			display:block;
+			height: 50px;
+			
+			&:nth-child(odd){
+				background:#fafafa;
+			}
+
+			&:last-child{
+				border-bottom: none;
+			}
+
+			&.resultHeader:nth-child(odd){
+				@include background-image(linear-gradient(#FFFFFF, #f3f3f3));
+			}
+
+			&.selected{
+				background:#ebf8fe;
+			}
+
+			div{
+				
+				display: block;
+				float:left;
+				text-align: center;
+				border-left: 1px solid $borderGrey;
+				height:23px;
+				line-height:23px;
+				padding:14px 0 13px 0;
+				
+				&:first-child{
+					text-align: left;
+					border-left: none;
+				}
+			}
+		
+			a{
+				font-weight: bold;
+			}
+		}
+
+		.resultHeader{
+			font-weight: bold;
+			height: 38px;
+
+			div{
+				height:13px;
+				line-height:14px;
+				padding:13px 0 12px;
+				border-color:rgba(0,0,0,0);
+				margin: 0px;
+				text-align:center;
+			}
+
+			input{
+				float: left;
+				margin-right: 8px;
+				margin-top: -1px;
+			}
+		}
+
+		// Columns
+
+		.username{
+			width: 27.5%;
+		}
+
+		.comments{
+			width: 8.5%;
+		}
+
+		.topics{
+			width: 8.52%;
+		}
+
+		.usergroups{
+			width: 13.87%;
+		}
+
+		.registration{
+			width: 13.65%;
+		}
+
+		.lastlogin{
+			width: 13.66%;
+		}
+
+		.lastcomment{
+			width: 13.66%;
+		}
+
+		//Username field elements
+
+		input{
+			margin:0 7px 0 8px;
+		}
+
+		img{
+			vertical-align: middle;
+			margin-right: 2px;
+		}
+
+		.windowLink{
+			float: right;
+			height: 14px;
+			width :13px;
+			margin: 6px 10px 0 0;
+			background-image: url('../img/sprite-advSearch.png');
+			background-position: -49px -20px;
+			background-repeat: no-repeat;
+		}
+
+		//usergroup
+		.align-right{
+			text-align:right;
+			margin-right: 19px;
+		}
+	}
+
+	.footerResults{
+		padding: 10px;
+		background: #f8f8f8;
+		height: 30px;
+		border:1px solid $borderGrey;
+		border-top: none;
+
+		.exportContainer{
+			float:right;	
+		}
+
+		.exportExcel, .loading{
+			height: 28px;
+			line-height:28px;
+			width: 106px;
+			display: inline-block;
+			text-align: center;
+		}
+		.exportExcel{
+			cursor:pointer;	
+		}
+
+		.loading{
+			border:1px solid $borderGrey;
+			background: #FFFFFF;
+
+			img{
+				margin-right: 4px;
+				vertical-align: middle;
+			}
+		}
+	}
+
+	.dropdownsFooter{
+		display: none;
+		float:left;
+		
+		.dropdown, .dropdownContainer{
+			width: 138px;
+		}
+
+		a{
+			pointer: cursor;
+		}
+
+		input[type="submit"]{
+			height: 30px;
+			width: 54px;
+			font-weight: bold;
+			color: #505050;
+			float:left;
+		}
+	}
+
+	@media only screen and (max-width:$desktopBreakPointMin) {
+	
+		.tableList{
+
+			.username{
+				width: 27%;
+			}
+
+			.align-right{
+				margin-right: 5px;
+			}
+		}
+
+		.footerResults {
+			.loading {
+				width: 80px;
+			}
+		}
+	}
+
+	@media only screen and (max-width:$tabletBreakPoint) {
+		
+		.tableList{
+			li {
+				height: auto;
+				padding: 20px;
+
+				div{
+					width: auto !important;
+					float:none;
+					border: none;
+					position: relative;
+					padding: 0px 0px 0px 50%;
+					text-align:left;
+
+					&:before {
+						position: absolute;
+						top: 0px;
+						left: 0px;
+						padding:0 10px 0 30px;
+						white-space: nowrap;
+					}
+				}
+			}
+
+			.resultHeader{
+				display: none;
+			}
+
+			.username {
+				padding-left: 0;
+				margin-bottom: 20px;				
+			}
+
+			.comments:before {
+				content: "Comments";
+			}
+
+			.topics:before {
+				content: "Topics";
+			}
+
+			.usergroups:before {
+				content: "Usergroups";
+			}
+
+			.registration:before {
+				content: "Registration";
+			}
+			
+			.lastlogin:before {
+				content: "Last login";
+			}
+
+			.lastcomment:before {
+				content: "Last comment";
+			}
+
+			.align-right{
+				margin-right: 0px;
+				text-align:left;
+			}
+		}
+
+		.footerResults{
+			height: auto;
+			padding-top: 0px;
+
+			.exportContainer{
+				float: none;
+				padding-top: 10px;
+			}
+		}
+
+		.dropdownsFooter{
+			float: none;
+
+			input, .dropdownContainer{
+				margin-top: 10px;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,111 @@
+/**
+* Date Picker Custom Style
+*
+**/
+
+.ui-datepicker{
+	width: 168px;
+	padding: 9px 15px 15px;
+	
+	margin-left: -1px;
+	border:1px solid $borderGrey;
+	border-top: none;
+
+	font: 12px Helvetica, Arial, sans-serif;
+	color: #111111;
+
+	@include border-radius($borderRadiusSmall);
+
+	th{
+		font-weight: normal;
+		font-size:8px;
+	}
+
+	td{
+		padding:0;
+		a{
+			padding: 5px 0;
+			text-align: center;
+		}
+		&:hover{
+			background: #1dadf5;
+		}
+	}
+	.ui-datepicker-header{
+		padding: 0px;
+	}
+
+	.ui-datepicker-title{
+		font-weight: bold;
+		height:28px;
+		line-height:28px;
+	}
+}
+
+a.ui-state-hover:hover{
+	color: #FFFFFF;
+}
+
+.ui-datepicker-calendar{
+	border:1px solid $borderGrey;
+
+	tr{
+		border-top: 1px solid $borderGrey;
+	}
+
+	td{
+		border-left: 1px solid $borderGrey;
+	}
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default{
+	background: transparent;
+	border: none;
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover{
+	background:none !important;
+	border-color:rgba(255, 255, 255, 0);
+	cursor:pointer;
+}
+
+.ui-widget-header{
+	border: none;
+	font-weight: normal;
+	border:1px solid $borderGrey;
+	border-bottom: none;
+	@include border-radius($borderRadiusSmall);
+	@include border-bottom-radius(0);
+	@include background-image(linear-gradient(#FFFFFF, #f3f3f3));
+ 	
+ 	.ui-icon{
+		background-image: url('../img/sprite-advSearch.png');
+		background-repeat: no-repeat;
+	}
+	.ui-datepicker-prev .ui-icon{
+		background-position: -77px -15px;
+	}
+	.ui-datepicker-next .ui-icon{
+		background-position: -100px -15px;
+	}
+	.ui-datepicker-prev, .ui-datepicker-next{
+		top: 3px;
+	}
+}
+
+input.datepicker{
+	font: 12px Helvetica, Arial, sans-serif;
+	color:#111111;
+	padding-left: 10px;
+	line-height: 28px;
+	text-transform: lowercase;
+	width: 100%;
+	border: none;
+	background: transparent;
+	height: 28px;
+	cursor:pointer;
+
+	&:focus {
+    	outline: 0;
+	}
+}

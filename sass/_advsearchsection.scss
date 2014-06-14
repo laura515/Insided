@@ -1,0 +1,174 @@
+//
+// Advanced search elements
+//
+
+.users-overview{
+
+	.selectDate.open{
+		.lightGreyStyle{
+			border-bottom:none;
+			padding-bottom: 3px;
+			@include border-bottom-radius(0);
+		}
+	}
+
+	.row{
+		margin-bottom: 10px;
+	}
+
+	.search-container{
+		
+		background:#f8f8f8;
+		border:1px solid $borderGrey;
+
+		input[type="checkbox"]{
+			margin-right:4px;
+			margin-left: 0px;
+		}
+
+		fieldset{
+			padding:19px 14px 20px 20px;
+			border-bottom:1px solid $borderGrey;
+
+			&:last-child{
+				border-bottom:none;
+				padding-top:10px;
+				padding-bottom:10px;
+			}
+		}
+
+		.cancelOpt{
+			margin-left: 4px;
+		}
+	}
+
+	.checkbox-columns{
+
+		ul{
+			float:left;
+
+			width: 129px;
+			min-height: 113px;
+
+			&:nth-child(2) {
+				width: 146px;
+			}
+			&:nth-child(3) {
+				width: 177px;
+			}
+			&:nth-child(4) {
+				width: 161px;
+			}
+			&:nth-child(5) {
+				width: 161px;
+			}
+			&:nth-child(6) {
+				width: 130px;
+			}
+		}
+
+		li{
+			
+			margin-bottom:6px;
+			max-width:140px;
+			
+			&:last-child{
+				margin-bottom:0px;
+			}
+			
+		}
+	}
+
+	//dropdowns
+
+	.multiSelec{
+			
+		.placeholder{
+			line-height: 30px;
+			height: 30px;
+			margin: 0;
+			padding-left: 10px;
+		}
+
+		a{
+			height: 20px;
+			line-height: 20px;
+			padding: 0;
+		}
+
+		ul{
+			margin:1px 0 8px 0;
+		}
+
+		li{
+			height: auto;
+			margin-top:2px;
+			
+			a{
+				padding-left: 4px;
+			}
+
+			a:hover{
+				background: #1dadf5;
+				color: #FFFFFF;
+			}
+		}
+		
+		input[type="checkbox"]{
+			margin-right: 8px !important;
+		}
+
+		.linkBlue{
+			display: inline-block;
+		}
+
+		.groupContainer{
+			padding:2px 9px;
+			max-height: 200px;
+			overflow: scroll;
+		}
+
+		.group{
+			margin-top:11px;
+		}
+	}
+
+	@media only screen and (max-width: $desktopBreakPointMin) {
+
+		#searchform{
+			.checkbox-columns ul{
+				width: 33%;
+				margin-bottom: 6px;
+			}
+		}
+	}
+
+	@media only screen and (max-width: $tabletBreakPoint) {
+
+		.row{
+			margin-bottom: 20px;
+		}
+
+		.btRemoveRow, .dropdownContainer{
+			margin-bottom: 10px;
+		}
+
+	}
+
+	@media only screen and (max-width: $checkboxsBreakPoint) {
+
+		#searchform{
+			.checkbox-columns ul{
+				
+				width: auto;
+				min-height: inherit;
+				float:none;
+
+				&:last-child {
+					margin-top: 0px;
+				}
+			}
+		}
+	}
+
+}

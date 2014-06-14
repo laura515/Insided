@@ -1,0 +1,71 @@
+//
+// Tags elements
+//
+
+.users-overview{
+
+	.middleSelection{
+		margin: 10px 0;
+		height: 30px;
+
+		.cancelOpt{
+			padding: 0px;
+			margin-left: 6px;
+			line-height: 30px;
+			display: none;
+
+		}
+	}
+
+	.tagsContainer{
+		float:left;
+
+		a{
+			padding: 8px 10px 6px 8px;
+			display: inline-block;
+		
+			span{
+				text-indent: -9999px;
+				line-height: 10px;
+				height: 9px;
+				width: 9px;
+				display:inline-block;
+				margin-right: 5px;
+				background-image: url('../img/sprite-advSearch.png');
+				background-position: -20px -20px;
+				background-repeat: no-repeat;
+			}
+		}
+
+		.plusCat{
+			text-indent: -9999px;
+			line-height: 6px;
+			height: 6px;
+			width: 7px;
+			display: inline-block;
+			margin:0 3px 0 4px;
+			background-image: url('../img/sprite-advSearch.png');
+			background-position: -82px -52px;
+			background-repeat: no-repeat;	
+		}
+	}
+	
+	@media only screen and (max-width: $desktopBreakPointMin) {
+		.middleSelection{
+			min-height: 30px;
+			height: auto;
+		}
+		
+		.tagsContainer{
+			float: none;
+		}
+
+		.paginationContainer{
+			float: none;
+			height: 30px;
+			margin-top:10px;
+		}
+	}
+
+}
+
