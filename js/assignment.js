@@ -34,6 +34,8 @@ $(function() {
 
     function fillTable(dataUser){
 
+      var timeDate = generateDateFormat(dataUser);
+
       var $listItemTemplate = '<li class="clearfix">'+
                               '<div class="username">'+
                                 '<input type="checkbox" name="'+dataUser.altname+'" value="'+dataUser.altname+'">'+
@@ -45,18 +47,42 @@ $(function() {
                               '<div class="topics">'+dataUser.topics+'</div>'+
                               '<div class="usergroups"><span class="align-right">'+dataUser.usergroups+'</span></div>'+
                               '<div class="registration">'+
-                                '<span class="align-right"><time datetime="2011-03-20">'+dataUser.registration+'</time></span>'+
+                                '<span class="align-right"><time datetime="'+timeDate[0]+'">'+dataUser.registration+'</time></span>'+
                               '</div>'+
                               '<div class="lastlogin"><span class="align-right">'+
-                                  '<time datetime="2012-05-15">'+dataUser.lastlogin+'</time></span>'+
+                                  '<time datetime="'+timeDate[1]+'">'+dataUser.lastlogin+'</time></span>'+
                               '</div>'+
                               '<div class="lastcomment">'+
-                                '<span class="align-right"><time datetime="2012-05-14">'+dataUser.lastcomment+'</time></span>'+
+                                '<span class="align-right"><time datetime="'+timeDate[2]+'">'+dataUser.lastcomment+'</time></span>'+
                               '</div>'+
                             '</li>';
 
       $table.append( $listItemTemplate );
 
+    }
+
+    function generateDateFormat(dataUser){
+
+      var valueDates = [dataUser.registration, dataUser.lastlogin, dataUser.lastcomment];
+      var timeDate = [];
+
+      var date = {};
+      var month, dateString = "";
+
+      for (var i = valueDates.length - 1; i >= 0; i--) {
+        
+        date = new Date(valueDates[i]);
+        month = date.getMonth() + 1;
+
+        if(month < 10) month = "0"+month;
+        
+        dateString = date.getFullYear()+"-"+month+"-"+date.getDate();
+        
+        timeDate.push(dateString);
+        timeDate.reverse();
+      };
+
+      return timeDate;
     }
 
     function addCheckEvents(){
