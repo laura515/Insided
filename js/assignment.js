@@ -1,6 +1,82 @@
 $(function() {
   
-  
+  //
+  // Fill data table using a json file
+  // add table events
+  //
+
+  $.fn.tableResults = function(opts, methods ) {
+
+    var $section = $(this);
+    var $table = $('.tableList');
+
+    var initialize = function() {
+
+      readData();
+      
+      return $section;
+    };
+
+    function readData(){
+      
+      var jsonUrl = "js/users-data.json";
+
+      $.getJSON(jsonUrl, function(data) {
+        
+        $.each(data, function(key, data) {
+      
+          fillTable(data);
+
+        });
+        addCheckEvents();
+      });
+    }
+
+    function fillTable(dataUser){
+
+      var $listItemTemplate = '<li class="clearfix">'+
+                              '<div class="username">'+
+                                '<input type="checkbox" name="'+dataUser.altname+'" value="'+dataUser.altname+'">'+
+                                '<img src="'+dataUser.thumbnail+'" alt="'+dataUser.altname+'" height="23" width="25">'+
+                                '<a href="'+dataUser.linkname+'" target="_blank">'+dataUser.username+'</a>'+
+                                '<a class="windowLink" href="'+dataUser.windowlink+'" target="_blank"></a> '+
+                              '</div>'+
+                              '<div class="comments">'+dataUser.comments+'</div>'+
+                              '<div class="topics">'+dataUser.topics+'</div>'+
+                              '<div class="usergroups"><span class="align-right">'+dataUser.usergroups+'</span></div>'+
+                              '<div class="registration">'+
+                                '<span class="align-right"><time datetime="2011-03-20">'+dataUser.registration+'</time></span>'+
+                              '</div>'+
+                              '<div class="lastlogin"><span class="align-right">'+
+                                  '<time datetime="2012-05-15">'+dataUser.lastlogin+'</time></span>'+
+                              '</div>'+
+                              '<div class="lastcomment">'+
+                                '<span class="align-right"><time datetime="2012-05-14">'+dataUser.lastcomment+'</time></span>'+
+                              '</div>'+
+                            '</li>';
+
+      $table.append( $listItemTemplate );
+
+    }
+
+    function addCheckEvents(){
+      
+      //select someone in the table
+      $table.find('input').change(function() {
+
+        $(this).closest('li').toggleClass('selected');
+
+        if($(this).is(":checked")) {
+          $('.dropdownsFooter').show();
+        }else if ($('.tableList').find('input:checked').length == 0){
+          $('.dropdownsFooter').hide();
+        }
+      });
+    }
+
+    return initialize();
+  }
+
 
   //
   //Advanced Search and drop downs functions
@@ -388,36 +464,12 @@ $(function() {
     return initialize();
   }
 
-  $.fn.tableResults = function(opts, methods ) {
 
-    var $section = $(this);
+  //
+  // call functions
+  //
 
-    var initialize = function() {
-
-      addCheckEvents();
-      return $section;
-    };
-
-    function addCheckEvents(){
-      
-      //select someone in the table
-      $('.tableList').find('input').change(function() {
-
-        $(this).closest('li').toggleClass('selected');
-
-        if($(this).is(":checked")) {
-          $('.dropdownsFooter').show();
-        }else if ($('.tableList').find('input:checked').length == 0){
-          $('.dropdownsFooter').hide();
-        }
-      });
-    }
-
-    return initialize();
-  }
- 
   $('.dropdownsSection').advancedSearchDropDowns();
   $('.resultSection').tableResults();
-
 
 });

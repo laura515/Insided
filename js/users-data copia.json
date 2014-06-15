@@ -1,4 +1,5 @@
 [
+	
 	{
 		"username": "Amber H.",
 		"altname": "AmberH",
@@ -9,9 +10,12 @@
 		"topics": "9",
 		"usergroups": "Registrered user",
 		"registration": "19-mar-12 12:00",
+		"datetime1": "2012-03-19",
 		"lastlogin": "16-aug-12 12:11",
-        "lastcomment": "16-aug-12 16:10"
-  	},
+        "datetime2": "2012-08-16",
+        "lastcomment": "16-aug-12 16:10",
+        "datetime3": "2012-08-16"
+	},
 	{
 		"username": "Bart Pineapple",
 		"altname": "BartPineapple",
@@ -21,11 +25,13 @@
 		"comments": "37",
 		"topics": "-",
 		"usergroups": "Registrered user",
-		"registration": "20-mar-11 13:57",
+		"registration": "20-mar-11 12:00",
+		"datetime1": "2011-03-20",
 		"lastlogin": "15-may-12 17:34",
-        "lastcomment": "14-may-12 20:01"
-	},
-	{
+        "datetime2": "2012-05-15",
+        "lastcomment": "14-may-12 20:01",
+        "datetime3": "2012-05-14"
+	},{
 		"username": "Caitlyn Appleseed",
 		"altname": "CaitlynAppleseed",
 		"thumbnail": "img/avatars/avatar-3.jpg",
@@ -35,10 +41,12 @@
 		"topics": "13",
 		"usergroups": "Registrered user",
 		"registration": "13-aug-12 22:09",
+		"datetime1": "2012-08-13",
 		"lastlogin": "13-aug-12 22:10",
-        "lastcomment": "3-aug-12 23:50"
-	},
-	{
+        "datetime2": "2012-08-13",
+        "lastcomment": "3-aug-12 23:50",
+        "datetime3": "2012-08-13"
+	},{
 		"username": "Carmen Candy",
 		"altname": "CarmenCandy",
 		"thumbnail": "img/avatars/avatar-4.jpg",
@@ -48,10 +56,12 @@
 		"topics": "22",
 		"usergroups": "Moderator",
 		"registration": "01-jan-11 11:21",
+		"datetime1": "2011-01-01",
 		"lastlogin": "15-aug-12 22:10",
-        "lastcomment": "15-aug-12 18:13"
-	},
-	{
+        "datetime2": "2012-08-15",
+        "lastcomment": "15-aug-12 18:13",
+        "datetime3": "2012-08-15"
+	},{
 		"username": "Dolf Dreamer",
 		"altname": "DolfDreamer",
 		"thumbnail": "img/avatars/avatar-5.jpg",
@@ -61,10 +71,12 @@
 		"topics": "-",
 		"usergroups": "Super-user",
 		"registration": "18-jan-11 12:08",
+		"datetime1": "2011-01-18",
 		"lastlogin": "16-aug-12 13:12",
-        "lastcomment": "16-aug-12 14:22"
-	},
-	{
+        "datetime2": "2012-08-16",
+        "lastcomment": "16-aug-12 14:22",
+        "datetime3": "2012-08-16"
+	},{
 		"username": "Edgar Enders",
 		"altname": "EdgarEnders",
 		"thumbnail": "img/avatars/avatar-6.jpg",
@@ -74,10 +86,12 @@
 		"topics": "-",
 		"usergroups": "Registrered user",
 		"registration": "12-dec-11 08:55",
+		"datetime1": "2011-12-12",
 		"lastlogin": "05-apr-12 08:08",
-        "lastcomment": "04-apr-12 23:59"
-	},
-	{
+        "datetime2": "2012-04-05",
+        "lastcomment": "04-apr-12 23:59",
+        "datetime3": "2012-04-12"
+	},{
 		"username": "Jane Blackswan",
 		"altname": "JaneBlackswan",
 		"thumbnail": "img/avatars/avatar-7.jpg",
@@ -87,10 +101,12 @@
 		"topics": "13",
 		"usergroups": "Registrered user",
 		"registration": "04-feb-12 14:34",
+		"datetime1": "2012-02-12",
 		"lastlogin": "16-aug-12 12:11",
-        "lastcomment": "14-aug-12 07:33"
-	},
-	{
+        "datetime2": "2012-08-16",
+        "lastcomment": "14-aug-12 07:33",
+        "datetime3": "2012-08-14"
+	},{
 		"username": "Jennifer Appleseed",
 		"altname": "JenniferAppleseed",
 		"thumbnail": "img/avatars/avatar-8.jpg",
@@ -99,11 +115,13 @@
 		"comments": "75",
 		"topics": "2",
 		"usergroups": "Moderator",
-		"registration": "16-mar-12 18:12",
+		"registration": "6-mar-12 18:12",
+		"datetime1": "2012-03-06",
 		"lastlogin": "15-may-12 17:34",
-        "lastcomment": "16-aug-12 16:10"
-	},
-	{
+        "datetime2": "2012-05-15",
+        "lastcomment": "16-aug-12 16:10",
+        "datetime3": "2012-08-16"
+	},{
 		"username": "JohnDoe",
 		"altname": "John Doe",
 		"thumbnail": "img/avatars/avatar-9.jpg",
@@ -113,10 +131,12 @@
 		"topics": "-",
 		"usergroups": "Moderator",
 		"registration": "30-jan-12 21:00",
+		"datetime1": "2012-01-30",
 		"lastlogin": "13-aug-12 22:10",
-        "lastcomment": "13-aug-12 23:50"
-	},
-	{
+        "datetime2": "2012-08-13",
+        "lastcomment": "13-aug-12 23:50",
+        "datetime3": "2012-08-13"
+	},{
 		"username": "JohnFoe",
 		"altname": "John Foe",
 		"thumbnail": "img/avatars/avatar-10.jpg",
@@ -126,8 +146,11 @@
 		"topics": "3",
 		"usergroups": "Super-user",
 		"registration": "07-may-12 04:14",
+		"datetime1": "2012-05-07",
 		"lastlogin": "05-apr-12 08:08",
-        "lastcomment": "14-may-12 20:01"
+        "datetime2": "2012-04-05",
+        "lastcomment": "14-may-12 20:01",
+        "datetime3": "2012-04-14"
 	}
 ]
                        

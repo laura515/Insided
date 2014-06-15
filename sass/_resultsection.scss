@@ -15,6 +15,11 @@
 	.tableList{
 		border: 1px solid $borderGrey;
 
+		img{
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+
 		li{
 			
 			border-bottom: 1px solid $borderGrey;
@@ -78,10 +83,20 @@
 			}
 		}
 
+		.align-right{
+			text-align:right;
+			margin-right: 23px;
+			display: inherit;
+		}
+
 		// Columns
 
 		.username{
 			width: 27.5%;
+
+			input{
+				margin:0 10px 0 8px;
+			}
 		}
 
 		.comments{
@@ -94,6 +109,10 @@
 
 		.usergroups{
 			width: 13.87%;
+
+			.align-right{
+				margin-right: 19px;
+			}
 		}
 
 		.registration{
@@ -106,17 +125,10 @@
 
 		.lastcomment{
 			width: 13.66%;
-		}
 
-		//Username field elements
-
-		input{
-			margin:0 7px 0 8px;
-		}
-
-		img{
-			vertical-align: middle;
-			margin-right: 2px;
+			.align-right{
+				margin-right: 20px;
+			}
 		}
 
 		.windowLink{
@@ -129,11 +141,6 @@
 			background-repeat: no-repeat;
 		}
 
-		//usergroup
-		.align-right{
-			text-align:right;
-			margin-right: 19px;
-		}
 	}
 
 	.footerResults{
@@ -200,6 +207,12 @@
 
 			.align-right{
 				margin-right: 5px;
+			}
+
+			.usergroups,.lastcomment{
+				.align-right{
+					margin-right: 5px;
+				}	
 			}
 		}
 
